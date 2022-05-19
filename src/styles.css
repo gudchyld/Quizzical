@@ -4,70 +4,70 @@
 } */
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .Start--title {
-  text-align: center;
+	text-align: center;
 }
 .Start--description {
-  text-align: center;
+	text-align: center;
 }
 .Start--button {
-  color: white;
-  padding: 10px 30px;
-  letter-spacing: 1.5px;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 15px;
-  border-color: transparent;
-  background-color: #4d5b9e;
+	color: white;
+	padding: 10px 30px;
+	letter-spacing: 1.5px;
+	font-weight: 600;
+	font-size: 16px;
+	border-radius: 15px;
+	border-color: transparent;
+	background-color: #4d5b9e;
 }
 .Start--buttonholder {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .questions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 400px;
-  margin-left: 30px;
-  margin-right: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 400px;
+	margin-left: 30px;
+	margin-right: 30px;
 }
 
 .questions--title {
-  font-size: 15px;
+	font-size: 15px;
 }
 
 .questions--button {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .button--button {
-  font-size: 12px;
-  border: 1px solid skyblue;
-  border-radius: 10px;
-  margin-right: 10px;
-  padding: 5px 10px;
+	font-size: 12px;
+	border: 1px solid skyblue;
+	border-radius: 10px;
+	margin-right: 10px;
+	padding: 5px 10px;
 }
 
 .green {
-  background-color: lightgreen;
+	background-color: lightgreen;
 }
 
 .red {
-  background-color: mediumorchid;
+	background-color: mediumorchid;
 }
 
 /* .questions--buttons > button{
@@ -79,6 +79,16 @@ border: solid 1px #293264;
 } */
 
 hr {
-  border: 0.94239px solid #e7e7e9;
-  margin-top: 15px;
+	border: 0.94239px solid #e7e7e9;
+	margin-top: 15px;
+}
+
+.quiz {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.quiz--button-chk {
+	margin-top: 50px;
 }
