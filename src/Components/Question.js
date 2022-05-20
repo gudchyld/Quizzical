@@ -2,12 +2,26 @@ import React from "react";
 import he from "he";
 import { nanoid } from "nanoid";
 
-export default function Question({ question, allAnswers, qID, updateClicked }) {
+export default function Question({
+  question,
+  allAnswers,
+  qID,
+  updateClicked,
+  showAnswer
+}) {
   //map through allAnswers array and get value,isClicked,isCorrect and id
   const answerElements = allAnswers.map((answer) => {
-    const styles = {
+    let styles = {
       backgroundColor: answer.isClicked ? "lightblue" : "transparent"
     };
+
+    if (showAnswer) {
+      if (answer.isCorrect) {
+        styles = { backgroundColor: "lightgreen" };
+      } else if (answer.isClicked && !answer.isCorrect) {
+        styles = { backgroundColor: "lightpink" };
+      }
+    }
 
     return (
       <button

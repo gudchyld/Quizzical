@@ -75,6 +75,7 @@ export default function Quiz() {
         question={elements.question}
         allAnswers={elements.answers}
         updateClicked={updateClicked}
+        showAnswer={showAnswers}
         qID={elements.id}
       />
     );
@@ -83,18 +84,29 @@ export default function Quiz() {
   return (
     <div className="quiz">
       {questionElements}
+
       <div className="quiz--btn-chk">
-        <button
-          className="button--button"
-          style={{
-            marginTop: 30,
-            padding: 15,
-            backgroundColor: "skyblue",
-            fontSize: 15
-          }}
-        >
-          Check Answer
-        </button>
+        {!showAnswers ? (
+          <button
+            className="button--button btn--chk"
+            onClick={() => setShowAnswers(true)}
+          >
+            Check Answer
+          </button>
+        ) : (
+          <button
+            className="button--button btn--chk"
+            onClick={() => {
+              setShowAnswers(false);
+              setResetQuiz((reset) => {
+                let x = reset + 1;
+                return x;
+              });
+            }}
+          >
+            Play Again
+          </button>
+        )}
       </div>
     </div>
   );
